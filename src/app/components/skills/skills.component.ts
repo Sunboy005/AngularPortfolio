@@ -16,7 +16,8 @@ export class SkillsComponent implements OnInit {
     .getPortfolioData()
     .subscribe(
       (response:any)=>{
-        this.mySkills=response.data.skills}
+        this.mySkills=response.data.skills
+      }
      
       )
   }
