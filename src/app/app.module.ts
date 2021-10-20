@@ -14,6 +14,7 @@ import { appRoutes } from './components/routes';
 import { PortfolioDetailsComponent } from './components/portfolio-details/portfolio-details.component';
 import { PortfolioService } from './_services/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),    
-    HttpClientModule
+    HttpClientModule, BrowserAnimationsModule
   ],
   providers: [
     PortfolioService,
