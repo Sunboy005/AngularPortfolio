@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Home } from 'src/app/_models/home';
 import { PortfolioService } from 'src/app/_services/portfolio.service';
+import { SpinnerService } from 'src/app/_services/spinner.service';
 
 @Component({
   selector: 'app-about',
@@ -19,9 +20,10 @@ export class AboutComponent implements OnInit {
     phone:""
 
   };
-  constructor(private myHttp:PortfolioService) { }
+  constructor(private myHttp:PortfolioService,private spinnerService:SpinnerService) { }
 
   ngOnInit(): void {
+    this.spinnerService.requestStarted();
     this.myHttp
     .getPortfolioData()
     .subscribe(
@@ -35,6 +37,8 @@ export class AboutComponent implements OnInit {
       }
      
       )
+      
+    this.spinnerService.requestEnded();
   }
 
 }

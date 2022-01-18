@@ -15,6 +15,7 @@ import { PortfolioDetailsComponent } from './components/portfolio-details/portfo
 import { PortfolioService } from './_services/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutComponent,
     ContactsComponent,
     FooterComponent,
-    PortfolioDetailsComponent
+    PortfolioDetailsComponent,
+    SpinnerComponent
     ],
   imports: [
     BrowserModule,

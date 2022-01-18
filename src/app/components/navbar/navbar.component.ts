@@ -10,6 +10,9 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
+    $.getScript("assets/js/main.js");
+    $.getScript("assets/js/main.js");
   }
 
 }

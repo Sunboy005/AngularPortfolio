@@ -22,6 +22,11 @@ export class HomeComponent implements OnInit {
   constructor(private myHttp:PortfolioService) { }
 
   ngOnInit(): void {
+
+    $.getScript("assets/vendor/typed.js/typed.min.js");
+    $.getScript("assets/js/main.js");
+    // $.getScript("assets/test.js");
+
     this.myHttp
     .getPortfolioData()
     .subscribe(
